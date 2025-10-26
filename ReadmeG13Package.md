@@ -46,6 +46,45 @@ sudo pacman -S --needed base-devel libusb jdk-openjdk maven libayatana-appindica
 
 **Note:** Modern Linux desktops require Ayatana AppIndicator for system tray functionality. The older libappindicator is not supported.
 
+
+## 🔴 openSUSE Users - Special Installation Required!
+
+**If you're using openSUSE Tumbleweed or Leap, you MUST use the openSUSE-specific package.**
+
+openSUSE requires different configuration than other distributions:
+- ✅ Creates the `plugdev` group (doesn't exist by default)
+- ✅ Configures `uinput` device permissions  
+- ✅ Adds user to both `plugdev` and `input` groups
+- ✅ Requires full system **reboot** (logout insufficient)
+
+### Download openSUSE Edition
+
+📦 **[Download SUSE-linux-g13-driver-v1.0.tar.gz](https://github.com/YOUR_USERNAME/YOUR_REPO/releases/tag/v1.0-opensuse)**
+
+### Quick Install for openSUSE
+
+```bash
+# Extract
+tar -xzf SUSE-linux-g13-driver-v1.0.tar.gz
+cd SUSE-linux-g13-driver
+
+# Install
+chmod +x install-opensuse.sh
+./install-opensuse.sh
+
+# REBOOT (required!)
+sudo reboot
+```
+
+**📖 Full Documentation:** See `README-OpenSUSE.md` and `InstallGuide-OpenSUSE.md` in the package.
+
+---
+
+## Standard Installation (Ubuntu, Debian, Fedora, Arch)
+
+For all other distributions, use the standard installer:
+
+
 ### 2. Build
 
 ```bash
