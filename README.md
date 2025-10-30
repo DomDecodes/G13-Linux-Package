@@ -6,6 +6,8 @@ Update: I noticed that the install script didn't always install the driver in th
         Also, I added a start G13 Driver entry just in case autostart fails.
         The command to run the script changed to ./InstallSystem.sh
 
+I tested the new 301025 version of the package on KDE Neon, Kubuntu 24.04 LTS, and Linux Mint 22.2 Cinnamon.
+
 Install locations should be as followed:
 
 /usr/local/bin/g13-driver                    # The driver executable
